@@ -1,0 +1,20 @@
+{
+  "name": "root-chain",
+  "version": "1.0.0",
+  "description": "A really simple library for chaining callback-based methods",
+  "main": "root-chain",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chaining",
+    "callbacks",
+    "asynchronous"
+  ],
+  "author": "Erik Rothoff Andersson <erik.rothoff@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erkie/root-chain.git"
+  }
+}
