@@ -32,7 +32,9 @@ Chainable.prototype.andSync = function(func) {
 	var link = this;
 
 	return this.add(function() {
-		func.apply(this, [].slice.call(arguments, 0, -1));
+		var ret = func.apply(this, [].slice.call(arguments, 0, -1));
+		if (ret === chain.exit)
+			return;
 		link.callbackWasCalled = true;
 		link.next();
 	}, arguments.length > 1 ? [].slice.call(arguments, 1) : []);
@@ -42,7 +44,9 @@ Chainable.prototype.thenSync = function(func) {
 	var link = this;
 
 	return this.add(function() {
-		func.apply(this, [].slice.call(arguments, 0, -1));
+		var ret = func.apply(this, [].slice.call(arguments, 0, -1));
+		if (ret === chain.exit)
+			return;
 		link.callbackWasCalled = true;
 		link.next();
 	}, arguments.length > 1 ? [].slice.call(arguments, 1) : false);
