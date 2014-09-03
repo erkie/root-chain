@@ -1,6 +1,6 @@
 {
   "name": "root-chain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A really simple library for chaining callback-based methods",
   "main": "root-chain",
   "scripts": {
